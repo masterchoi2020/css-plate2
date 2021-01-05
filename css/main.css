@@ -27,6 +27,8 @@ header .inner-header {
 
     display: flex;
     justify-content: space-between;
+
+    /* 한줄은 align-items, 두줄은 aligin-content를 이용해 중앙정렬 */
     align-items: center;
 }
 
@@ -45,7 +47,7 @@ header .inner-header .logo a img {
 
 header .inner-header .intro-text {
     /* background: tomato; */
-    /* flex-grow: 4;
+    /* flex-grow: 4;   6분의 1을 차지하게 됨 
     flex-basis: 0; */
     flex: 4;
     margin-left: 40px;
@@ -62,7 +64,7 @@ header .inner-header .menu-open {
     font-weight: 700;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;  /* 오른쪽 끝으로 붙이기*/
     align-items: center;
 }
 
@@ -129,8 +131,8 @@ section.visual .slide li {
 }
 
 section.visual .slide li img {
-    /* 그림 화면에 꽉 채우는 방법: 
-    포지션을 absolute로 만들고 좌표의 좌/위 0으로 만든 다음 width를 100%늘려줌 */
+    /* 이미지를 화면에 꽉 채우는 방법: 
+    포지션을 absolute로 만들고 좌표에서 왼쪽/윗쪽 위치를 0으로 만든 다음 width를 100% 로 늘려 주면됨 */
 
     position: absolute;
     left: 0;
@@ -189,13 +191,14 @@ section.contents .main-text {
     padding-bottom: 50px;
 
     font-size: 25px;
-
+    /* (main-text h3, p 수평정렬)
+       항상 컨터이너쪽에 diplay:flex를 걸어준다  */
     display: flex;
     position: relative;
 }
 
 section.contents .main-text::after {
-    content:"”";
+    content:"”";        /* ㄴ 한자 2페이지에 2번째 따옴표 */
     font-size: 300px;
 
     position: absolute;
@@ -270,7 +273,7 @@ section.contents .project .top a span {
 
 section.contents .project ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* 모든 공백을 균일하게 만들어 준다. */
 }
 
 section.contents .project ul li {
